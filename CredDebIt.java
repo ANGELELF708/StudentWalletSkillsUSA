@@ -1,12 +1,12 @@
-public class CredDebIt {
+public class CredDebIt { //Object class for credit/debit card information
 //variables
-  private boolean credit;
-  private String cardNum;
-  private String expDate;
-  private String secCode;
-  private String nameFirst;
-  private String nameLast;
-  private String seperator = "---------------------------------------------";
+  private boolean credit; //"is this a credit card?" boolean
+  private String cardNum; //string for storing the card number
+  private String expDate; //string for storing the experation date
+  private String secCode; //string for storing the security code
+  private String nameFirst; //String for storing user's first name
+  private String nameLast; //string for storing user's last name
+  private String seperator = "---------------------------------------------"; //this is a seperator for readibility when printing (probs would've been worth to just make this a class)
   private String nl = System.getProperty("line.separator");
   private String creditOrDebit;
 //constructors 
