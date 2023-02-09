@@ -1,0 +1,168 @@
+import java.io.*;
+import java.util.*;
+
+//Title
+    NewScreen reset = new NewScreen("Student Wallet", "Skills USA");
+    reset.newScreen();
+
+Login login = new Login ("JohnDoe", "123", "Chad", "1234");
+
+, 
+
+login.setUsername(username);
+login.setPassword(password);
+
+ if(login.authenticateCustomer() == true) {
+      System.out.println("Welcome " + username + "!"); 
+      
+    }
+    else {
+        System.out.println("Invalid Credentials"); //find a way to send back to login screen
+    }
+  }
+}
+
+
+    this.header = header;
+    this.subheader = subheader;
+    this.custUser = custUser;
+    this.custPass = custPass;
+    this.devUser = devUser;
+    this.devPass = devPass;
+
+    for(int indexCounter = index; indexCounter > 0; indexCounter--) {
+      System.out.println(idList.get(indexCounter).getID()); //fix
+
+//print
+    for(ID placeholderID : idList.getIDlist) {
+      System.out.println(placeholderID);
+}
+
+    public static List<ID> getIDList() {
+        return idList;
+
+    //print
+    for(ID placeholderID : IdentificationList.getIDList()) {
+      System.out.println(placeholderID.toString());
+}
+
+        Options test = new Options();
+    test.addOption("test1");
+    test.addOption("test2");
+    test.addOption("test3");
+    test.getOptions();
+//////////////////////////////////////////////////////////////
+
+//CHATGPT UPDATED IdentificationList.java REVEIW LATER
+import java.util.*;
+public class IdentificationList {
+  private static List<ID> idList = new ArrayList<>();
+
+  public static void addID(ID id) {
+    idList.add(id);
+  }
+
+  public static List<ID> getIDList() {
+    return idList;
+  }
+}
+
+   for(ID placeholderID : IdentificationList.getIDList()) { //possibly got the < > symbols wrong on the for-loop method o printing retry with both
+      System.out.println(placeholderID.toString());
+}
+        IdentificationList.addID(addID);
+
+////
+  public static String getIDList() {
+    StringBuilder sb = new StringBuilder();
+    for (ID id : idList) {
+      sb.append(id.toString());
+      sb.append("\n");
+    }
+    return sb.toString();
+  }
+
+   public static void addID(ID id) {
+        idList.add(id);
+    }
+  
+
+    }
+
+// print
+    for (int index = 0; index < IdentificationList.idList.size();index++) { 	//for ever entry in arrayList called idList (stored in the IdentificationList class):	      
+	          System.out.println(IdentificationList.idList.get(index)); 		//print the corresponding ID.
+
+
+//ORIGINAL IdentificationList.getIdentificationList DESIGN
+import java.util.*;
+public class IdentificationList {
+//variables
+  public static List<ID> idList = new ArrayList<>(); 
+//methods 
+  public static StringBuilder getIdentificationList() { //when the function "getIdentificationList" is ran:
+    StringBuilder idListStringBuild = new StringBuilder();//create String builder called "idListStringBuild"
+    for(int index = idList.size(); index > 0; index--) { //for each ID saved in 'idList':
+      idListStringBuild.append(idList.get(index).getID()); //add corresponding ID to 'idListStringBuild;'
+    }
+    return idListStringBuild; //return the entire list of IDs (idListStringBuild);;
+  }
+}
+
+//StudentWalletScreenIdentification ORIGINAL DESIGN PRE KODEZI
+import java.io.*; //imports
+import java.util.*; //imports
+public class StudentWalletScreenIdentification { //When class 'StudentWalletScreenIdentification' is called:
+  public static void print() { //print:
+    // Title
+    NewScreen reset = new NewScreen("Student Wallet", "ID"); // when the function "reset" is ran, clear the screen and create a title with the header "Student Wallet" and the subheader "ID"
+    reset.newScreen(); //run the function "reset" (clear the screen and print the screen title(see: line 6))
+    // IDs
+    ID defaultID = new ID("John Doe", "123456789", "Evergreen Highschool"); //Save a default ID (for test purposes) object for John Doe with the student number "123456789," and his school as "Evergreen Highschool"
+    System.out.println(defaultID.getID()); //print the default ID
+    System.out.println(IdentificationList.getIdentificationList());
+    // Options
+    System.out.println("(0) Go Back"); //print the instructions to go back to home screen using the menu
+    System.out.println("(1) Add New"); //print the instructions to add a new ID using the menu
+    Scanner reader = new Scanner(System.in); //create a scanner called "reader" for reading user inputs for the menu
+    String menuOptions = reader.next();  //declare a string to connect save the inputs of reader to be read by a switch statement
+    switch (menuOptions) { //if menuOptions is equal to (if someone inputs) one of the following:
+      case "0": // if 0 is inputted
+        StudentWalletScreenHome.print(); //print the Home Screen ("StudentWalletScreenHome")
+        break; //end the 0 input instructions
+      // add new
+      case "1": //if 1 is inputted
+        StudentWalletScreenAddIdentification.print(); //print the StudentWalletScreenAddIdentification Screen thats saved in another class
+        break; // end the instructions for if 1 is inputted;;;
+    }
+  }
+}
+
+//StudentWalletScreenIdentification KODEZI NEW DESIGN
+import java.io.*;
+import java.util.*;
+public class StudentWalletScreenIdentification {
+  public static void print() {
+   
+    NewScreen reset = new NewScreen("Student Wallet", "ID");
+    reset.newScreen();
+   
+    ID defaultID = new ID("John Doe", "123456789", "Evergreen Highschool");
+    System.out.println(defaultID.getID());
+    System.out.println(IdentificationList.getIdentificationList());
+   
+    System.out.println("(0) Go Back");
+    System.out.println("(1) Add New");
+    Scanner reader = new Scanner(System.in);
+    String menuOptions = reader.next(); 
+    switch (menuOptions) {
+      case "0":
+        StudentWalletScreenHome.print();
+        break;
+     
+      case "1":
+        StudentWalletScreenAddIdentification.print();
+        break;
+    }
+  }
+}

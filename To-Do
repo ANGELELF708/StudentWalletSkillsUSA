@@ -1,0 +1,18 @@
+Log-in System*
+Home Screen*
+Add New*
+  ID* 
+  Credit/Debit* 
+  Crypto*
+View*
+Logout*
+School ID stuff*
+Debit Card stuff*
+Crypto Currency stuff*
+
+Optional -
+Options Class (I can't figure it out, but it would remove a lot of clutter)
+Make addID have its own class for clutter reasons
+
+Problems -
+idList only prints memory location
