@@ -3,7 +3,7 @@ class Main {
   Username: JohnDoe
   Password: 123  */
   public static void main(String[] args) {
-  StudentWalletScreenLogin.print();
+  StudentWalletScreenLogin.print(); //prints the login screen
   }
 }
 
